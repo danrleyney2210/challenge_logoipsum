@@ -11,12 +11,12 @@ const GlobalStyles = createGlobalStyle`
   }
   ${({ theme }) => css`
     html {
-      font-size: 62.5%;
+      /* font-size: 62.5%; */
     }
     body {
       background-color: #e7e9ed;
       font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
+      /* font-size: ${theme.font.sizes.medium}; */
     }
   `}
 `

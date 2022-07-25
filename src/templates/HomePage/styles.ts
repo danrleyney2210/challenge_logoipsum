@@ -110,7 +110,9 @@ export const SidebarFilter = styled.div`
   }
 `
 
-export const Main = styled.div``
+export const Main = styled.div`
+  width: 100%;
+`
 
 export const Title = styled.p`
   font-weight: 700;

@@ -10,6 +10,7 @@ import { PropertyType } from 'components/PropertyType'
 import { Commodity } from 'components/Commodity'
 import { TypeHouse } from 'components/TypeHouse'
 import { ReviewScore } from 'components/ReviewScore'
+import { CardTicket } from 'components/CardTicket'
 
 export const HomePage = () => {
   return (
@@ -54,7 +55,7 @@ export const HomePage = () => {
           </S.SidebarFilter>
 
           <S.Main>
-            <p>sdasdas</p>
+            <CardTicket />
           </S.Main>
         </div>
       </S.ContentMain>
