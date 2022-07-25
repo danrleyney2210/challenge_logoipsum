@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 import { ReactSVG } from 'react-svg'
-import { Button } from 'components/Button'
+import { Button } from 'components/atoms/Button'
 
 export const Packeges = () => {
   return (
@@ -17,7 +17,8 @@ export const Packeges = () => {
           </div>
           <Button
             text={'Conhecer mais pacotes'}
-            color={'#fff'}
+            color={'#4070F4'}
+            background={'fff'}
             icon={'/icons/arrowRight.svg'}
           />
         </S.ContentPackages>

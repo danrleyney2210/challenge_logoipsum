@@ -5,12 +5,12 @@ import { Input } from 'antd'
 import { GrLocation } from 'react-icons/gr'
 
 import { ReactSVG } from 'react-svg'
-import { CardPrices } from 'components/CardPrices'
-import { PropertyType } from 'components/PropertyType'
-import { Commodity } from 'components/Commodity'
-import { TypeHouse } from 'components/TypeHouse'
-import { ReviewScore } from 'components/ReviewScore'
-import { CardTicket } from 'components/CardTicket'
+import { CardPrices } from 'components/molecules/CardPrices'
+import { PropertyType } from 'components/molecules/PropertyType'
+import { Commodity } from 'components/molecules/Commodity'
+import { TypeHouse } from 'components/molecules/TypeHouse'
+import { ReviewScore } from 'components/molecules/ReviewScore'
+import { CardTicket } from 'components/molecules/CardTicket'
 
 export const HomePage = () => {
   return (
@@ -55,6 +55,8 @@ export const HomePage = () => {
           </S.SidebarFilter>
 
           <S.Main>
+            <CardTicket />
+            <CardTicket />
             <CardTicket />
           </S.Main>
         </div>

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 type color = {
+  background: string
   color: string
 }
 
 export const Wrapper = styled.button<color>`
   cursor: pointer;
-  background-color: ${(props) => props.color};
-  color: #4070f4;
+  background-color: ${(props) => props.background};
+  color: ${(props) => props.color};
   border: none;
   padding: 19px 17px;
   font-size: 16px;

@@ -78,10 +78,7 @@ export const ContentMain = styled.div`
   }
 `
 
-export const CardPrice = styled.div`
-  p {
-  }
-`
+export const CardPrice = styled.div``
 
 export const SidebarFilter = styled.div`
   background-color: #fff;
@@ -111,7 +108,10 @@ export const SidebarFilter = styled.div`
 `
 
 export const Main = styled.div`
-  width: 100%;
+  width: 929px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 `
 
 export const Title = styled.p`

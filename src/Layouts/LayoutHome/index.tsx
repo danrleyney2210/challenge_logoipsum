@@ -1,5 +1,5 @@
-import Footer from 'components/Footer'
-import Header from 'components/Header'
+import Header from 'components/molecules/Header'
+import Footer from 'components/organisms/Footer'
 import * as S from './styles'
 
 type Props = {
