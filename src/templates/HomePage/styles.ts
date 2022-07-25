@@ -19,9 +19,10 @@ export const HeaderMain = styled.div`
       display: flex;
       .contentSearch {
         border: 0.8px solid #ced2db;
-        padding: 5px 17px;
+        padding: 5px 0;
 
         > span {
+          border: none;
           display: flex;
           align-items: center;
         }
@@ -30,6 +31,7 @@ export const HeaderMain = styled.div`
           padding-left: 17px;
           border: none;
           width: 267px;
+          outline: none;
 
           &::placeholder {
             font-weight: 500;
@@ -84,6 +86,7 @@ export const SidebarFilter = styled.div`
   background-color: #fff;
   width: 367px;
   padding: 24px;
+  height: fit-content;
 
   .header {
     display: flex;
@@ -97,6 +100,7 @@ export const SidebarFilter = styled.div`
       color: #0a2156;
       font-weight: 700;
       font-size: 24px;
+      margin-bottom: 0;
     }
 
     span {
@@ -112,6 +116,12 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  .content_pagination {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 `
 
 export const Title = styled.p`

@@ -4,6 +4,28 @@ import * as S from './styles'
 import { GrLocation } from 'react-icons/gr'
 import { Button } from 'components/atoms/Button'
 
+interface cardProps {
+  date: string
+  name: string
+  description: string
+  price: string
+  location: string
+  departament: string
+  imagem: string
+  id: string
+}
+
+// {
+//   date,
+//   name,
+//   description,
+//   price,
+//   location,
+//   departament,
+//   imagem,
+//   id
+// }: cardProps
+
 export const CardTicket = () => {
   return (
     <S.Wrapper>
