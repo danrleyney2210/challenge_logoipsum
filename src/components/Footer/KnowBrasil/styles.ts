@@ -26,6 +26,7 @@ export const Container = styled.div`
   .contentCard {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 
     .item {
