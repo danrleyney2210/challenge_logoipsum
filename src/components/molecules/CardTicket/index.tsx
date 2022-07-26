@@ -3,11 +3,13 @@ import { ReactSVG } from 'react-svg'
 import * as S from './styles'
 import { GrLocation } from 'react-icons/gr'
 import { Button } from 'components/atoms/Button'
+import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 interface cardProps {
-  date: string
+  date?: string
   name: string
-  description: string
+  description?: string
   price: string
   location: string
   departament: string
@@ -26,28 +28,39 @@ interface cardProps {
 //   id
 // }: cardProps
 
-export const CardTicket = () => {
+export const CardTicket = ({
+  id,
+  name,
+  location,
+  price,
+  departament,
+  imagem,
+  ...rest
+}: cardProps) => {
+  const router = useRouter()
+
   return (
-    <S.Wrapper>
+    <S.Wrapper {...rest}>
       <div className="content_left">
         <div className="contentImage">
           <button className="btn_ticket">Ingresso</button>
           <ReactSVG src="/icons/ic-heart.svg" className="ic-heart" />
-          <ReactSVG src="/img/teste.svg" />
+          <ReactSVG src={'http://loremflickr.com/640/480/sports'} />
+          {/* <Image src="http://loremflickr.com/640/480/sports" /> */}
         </div>
 
         <div className="info">
-          <h3>Lorem ipsum dolor amet consectetur</h3>
+          <h3>{name}</h3>
           <span>
             <GrLocation />
-            GetYourGuide Tours & Tickets GmbH{' '}
+            {location}
           </span>
 
           <div className="ponts_reviews">
             <div className="card_score">
               <span>6.3</span>
             </div>
-            <p>Excellent</p>
+            <p>{departament}</p>
             <span>(423 Reviews)</span>
           </div>
         </div>
@@ -58,10 +71,11 @@ export const CardTicket = () => {
 
         <p>
           <span>R$</span>
-          1.391,28
+          {price}
         </p>
 
         <Button
+          onClick={() => router.push(`/details/${id}`)}
           text={'Saber mais'}
           background={'#4070F4'}
           color={'#fff'}

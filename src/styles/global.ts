@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
       /* font-size: 62.5%; */
     }
     body {
-      background-color: #e7e9ed;
+      background-color: #f7f7f7;
       font-family: ${theme.font.family};
       /* font-size: ${theme.font.sizes.medium}; */
     }

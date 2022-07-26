@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <ReactSVG src="/logos/logo.svg" />
+        <Link href="/">
+          <ReactSVG src="/logos/logo.svg" style={{ cursor: 'pointer' }} />
+        </Link>
         <div className="login">
           <div>
             <span>Cotação dólar hoje: R$5,53</span>

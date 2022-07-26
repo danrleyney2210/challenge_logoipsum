@@ -14,17 +14,7 @@ import { Commodity } from 'components/molecules/Commodity'
 import { TypeHouse } from 'components/molecules/TypeHouse'
 import { ReviewScore } from 'components/molecules/ReviewScore'
 import { CardTicket } from 'components/molecules/CardTicket'
-
-interface TypeTicket {
-  createdAt: string
-  name: string
-  description: string
-  price: string
-  location: string
-  departament: string
-  images: string
-  id: string
-}
+import { TypeTicket } from 'types/Ticket'
 
 export const HomePage = () => {
   const [data, setData] = useState<TypeTicket[]>()
@@ -82,12 +72,20 @@ export const HomePage = () => {
           </S.SidebarFilter>
 
           <S.Main>
-            <CardTicket />
-            <CardTicket />
-            <CardTicket />
-            <CardTicket />
-            <CardTicket />
-            <CardTicket />
+            {data &&
+              data.map((item) => {
+                return (
+                  <CardTicket
+                    location={item.location}
+                    price={item.price}
+                    departament={item.departament}
+                    imagem={item.images}
+                    id={item.id}
+                    name={item.name}
+                    key={item.id}
+                  />
+                )
+              })}
 
             <div className="content_pagination">
               <Pagination defaultCurrent={6} total={50} />

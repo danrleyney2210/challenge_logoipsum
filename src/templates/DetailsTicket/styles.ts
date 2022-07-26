@@ -58,6 +58,12 @@ export const Wrapper = styled.div`
         font-size: 16px;
         border: none;
       }
+
+      img,
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .ponts_reviews {
@@ -140,6 +146,10 @@ export const Wrapper = styled.div`
         width: 100%;
         height: 340px;
         background-color: #ccc;
+
+        iframe {
+          border: none;
+        }
       }
     }
   }
@@ -239,5 +249,17 @@ export const cardTicketBuy = styled.div`
       font-weight: 500;
       font-size: 17px;
     }
+  }
+`
+
+export const Load = styled.div`
+  height: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div {
+    width: 100px;
   }
 `
