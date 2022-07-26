@@ -15,6 +15,10 @@ import { TypeHouse } from 'components/molecules/TypeHouse'
 import { ReviewScore } from 'components/molecules/ReviewScore'
 import { CardTicket } from 'components/molecules/CardTicket'
 import { TypeTicket } from 'types/Ticket'
+import { BiCalendar } from 'react-icons/bi'
+
+import type { DatePickerProps } from 'antd'
+import { DatePicker, Space } from 'antd'
 
 export const HomePage = () => {
   const [data, setData] = useState<TypeTicket[]>()
@@ -30,6 +34,10 @@ export const HomePage = () => {
     getTicket()
   }, [])
 
+  const onChange: DatePickerProps['onChange'] = (date, dateString) => {
+    console.log(date, dateString)
+  }
+
   return (
     <S.Wrapper>
       <S.HeaderMain>
@@ -42,10 +50,8 @@ export const HomePage = () => {
               />
             </div>
             <div className="contentDate">
-              <Input
-                placeholder="GetYourGuide Tours & Tickets GmbH"
-                prefix={<GrLocation size={20} />}
-              />
+              <BiCalendar size={20} />
+              <DatePicker onChange={onChange} />
             </div>
           </div>
 

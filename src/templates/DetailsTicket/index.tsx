@@ -13,6 +13,7 @@ import { FaPlane } from 'react-icons/fa'
 import { FiCoffee } from 'react-icons/fi'
 import { BiHomeAlt } from 'react-icons/bi'
 import { TypeTicket } from 'types/Ticket'
+import Image from 'next/image'
 
 export const DetailsTicket = () => {
   const [details, setDetails] = useState<TypeTicket>()
@@ -39,6 +40,7 @@ export const DetailsTicket = () => {
             <div className="header_Details">
               <h4>
                 <ReactSVG src="/icons/ArrowBack.svg" />
+
                 {details.name}
               </h4>
               <p>
@@ -48,7 +50,9 @@ export const DetailsTicket = () => {
             </div>
             <div className="content_image">
               <button className="btn_view">Visualizar mais fotos</button>
-              <ReactSVG src="/img/imageDetails.svg" />
+              {/* <ReactSVG src="/img/imageDetails.svg" /> */}
+              <Image src={`${details.images}`} width={'1320px'} height={'434px'}/>
+
             </div>
 
             <div className="content_body">

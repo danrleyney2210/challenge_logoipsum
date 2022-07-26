@@ -1,7 +1,18 @@
-/** @type {import('next').NextConfig} */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const withPlugins = require('next-compose-plugins')
+const withImages = require('next-images')
+
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true
+  
+  images: {
+    domains: [
+      'loremflickr.com'
+    ]
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 }
 
-module.exports = nextConfig
+module.exports = withPlugins([[withImages]], nextConfig)
+

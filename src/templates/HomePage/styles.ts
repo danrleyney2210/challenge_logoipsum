@@ -17,14 +17,17 @@ export const HeaderMain = styled.div`
 
     > div {
       display: flex;
+
       .contentSearch {
         border: 0.8px solid #ced2db;
-        padding: 5px 0;
+        padding: 0;
+        height: 48px;
 
         > span {
           border: none;
           display: flex;
           align-items: center;
+          height: 100%;
         }
 
         input {
@@ -41,11 +44,51 @@ export const HeaderMain = styled.div`
 
       .contentDate {
         border: 0.8px solid #ced2db;
-        padding: 5px 17px;
+        padding: 0 15px;
+        height: 48px;
+        display: flex;
+        align-items: center;
 
-        > span {
+        > div {
+          border: none;
           display: flex;
           align-items: center;
+          height: 100%;
+
+          > div {
+            input {
+              padding-left: 0px;
+              outline: none !important;
+            }
+
+            > span {
+              padding-left: 7px;
+
+              > span {
+                /* display: none; */
+                background-image: url('icons/ic-arrow-down.svg');
+                background-repeat: no-repeat;
+                background-size: 13px;
+                padding-top: 0;
+                background-position-y: 55%;
+
+                svg {
+                  /* height: 20px; */
+                  width: 20px;
+                  padding-top: 20px;
+                  /* background-color: yellow; */
+                }
+
+                svg path {
+                  /* fill: #fff; */
+                  z-index: 10;
+                }
+                /* svg:nth-child(1) {
+                  display: none;
+                } */
+              }
+            }
+          }
         }
 
         input {

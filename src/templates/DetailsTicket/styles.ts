@@ -57,6 +57,7 @@ export const Wrapper = styled.div`
         font-weight: 500;
         font-size: 16px;
         border: none;
+        z-index: 2;
       }
 
       img,
