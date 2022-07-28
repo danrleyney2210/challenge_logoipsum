@@ -9,7 +9,7 @@ export const Packeges = () => {
       <S.Container>
         <S.ContentPackages>
           <div>
-            <ReactSVG src="/img/gloss.svg" />
+            <ReactSVG src="/img/planet.svg" />
             <p>
               Pacotes a partir de R$499? Até parece viagem! <br /> Descubra o
               seu próximo destino por um precinho que só o lorem tem.

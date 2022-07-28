@@ -1,6 +1,19 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  .contentLoad {
+    height: 900px;
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-loading {
+    height: 100px;
+    width: 100px;
+  }
+`
 
 export const HeaderMain = styled.div`
   background-color: #fff;
@@ -19,7 +32,7 @@ export const HeaderMain = styled.div`
       display: flex;
 
       .contentSearch {
-        border: 0.8px solid #ced2db;
+        border: 0.6px solid #ced2db;
         padding: 0;
         height: 48px;
 
@@ -43,7 +56,7 @@ export const HeaderMain = styled.div`
       }
 
       .contentDate {
-        border: 0.8px solid #ced2db;
+        border: 0.6px solid #ced2db;
         padding: 0 15px;
         height: 48px;
         display: flex;
@@ -98,6 +111,22 @@ export const HeaderMain = styled.div`
           &::placeholder {
             font-weight: 500;
           }
+        }
+      }
+
+      .contentFind {
+        border: 0.6px solid #ced2db;
+        padding: 0;
+        height: 48px;
+        width: 48px;
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg path {
+          fill: #ccc;
         }
       }
     }
@@ -164,6 +193,68 @@ export const Main = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 24px;
+
+    .page-info {
+      display: flex;
+      align-items: center;
+
+      .contentSelect {
+        display: flex;
+        align-items: center;
+
+        > p {
+          font-weight: 500;
+          font-size: 12px;
+          padding-right: 8px;
+          margin-bottom: 0px;
+        }
+
+        select {
+          width: 69px;
+          height: 28px;
+          border: 1px solid #8a90bd;
+          border-radius: 5px;
+        }
+      }
+
+      .result {
+        font-weight: 400;
+        font-size: 12px;
+        color: #828292;
+        padding-right: 24px;
+      }
+    }
+
+    .pagination {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 0px;
+      gap: 10px;
+
+      .page-num {
+        padding: 7px 14px;
+        font-size: 14px;
+        color: #455cc7;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #455cc7;
+          color: #fff;
+        }
+      }
+
+      .active {
+        a {
+          background-color: #455cc7;
+          color: #fff;
+        }
+      }
+    }
   }
 `
 

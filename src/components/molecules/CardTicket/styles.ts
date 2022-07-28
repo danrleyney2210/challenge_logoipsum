@@ -13,7 +13,18 @@ export const Wrapper = styled.div`
 
   .contentImage {
     width: 233px;
+    height: 233px;
     position: relative;
+
+    > span {
+      > span {
+        image {
+          width: 100%;
+          height: 100%;
+          background-color: red;
+        }
+      }
+    }
 
     .btn_ticket {
       position: absolute;
@@ -28,6 +39,7 @@ export const Wrapper = styled.div`
       cursor: pointer;
       transition: all 0.2s;
       font-weight: 500;
+      z-index: 2;
 
       &:hover {
         background-color: #ffad0d;
@@ -37,9 +49,10 @@ export const Wrapper = styled.div`
 
     .ic-heart {
       position: absolute;
-      right: 40px;
+      right: 17px;
       top: 16px;
       cursor: pointer;
+      z-index: 2;
 
       &:hover {
         svg path {
@@ -52,6 +65,7 @@ export const Wrapper = styled.div`
   .info {
     height: 100%;
     padding-top: 35px;
+    padding-left: 24px;
 
     h3 {
       font-weight: 500;
